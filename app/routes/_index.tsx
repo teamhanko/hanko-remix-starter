@@ -1,19 +1,22 @@
-import type { MetaFunction } from "@remix-run/node";
-import { useNavigate } from "@remix-run/react";
+import HankoAuth from "../components/HankoAuth";
+import HankoStarterInfo from "../hanko starter components/HankoStarterInfo";
 
-export const meta: MetaFunction = () => {
+export const loader = () => {
+  return { hankoUrl: process.env.HANKO_API_URL }; 
+};
+
+export const meta = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Hanko Remix Starter" },
+    { name: "description", content: "This is a starter repo with an implemention of Hanko in Remix" },
   ];
 };
 
 export default function Index() {
-  const navigate = useNavigate();
-
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8", display: "flex", justifyContent: "center", alignItems:"center", marginTop: "100px"}}>
-      <button onClick={() => navigate("/login")}>Login</button>
-    </div>
+    <>
+      <HankoAuth />
+      <HankoStarterInfo />
+    </>
   );
 }
