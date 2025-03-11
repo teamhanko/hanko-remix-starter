@@ -25,7 +25,9 @@ const LogoutButton = () => {
     const logout = async () => {
         try {
             await hanko?.user.logout();
-            navigate("/");
+
+            navigate("/");//Path the user will be redirected to once logged out
+            
             return;
         } catch (error) {
             console.error("Error during logout:", error);

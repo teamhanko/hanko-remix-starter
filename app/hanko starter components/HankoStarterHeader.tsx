@@ -1,4 +1,3 @@
-
 import { useNavigate, useLocation } from "@remix-run/react";
 
 import LogoutButton from '../components/LogoutButton'
@@ -18,12 +17,10 @@ const HankoStarterHeader = () => {
   let menu =           
   <button onClick={() => navigate('/profile')}>Profile</button>
 
-
   if(location.pathname.includes('profile')){
     menu = 
-    <button onClick={() => navigate('/dashboard')}>dashboard</button>
+    <button onClick={() => navigate('/dashboard')}>Dashboard</button>
   }
-
   
   return (
     <div className='starterHeader'>

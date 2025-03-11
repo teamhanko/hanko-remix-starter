@@ -16,7 +16,7 @@ const HankoAuth = () => {
   const hankoUrl = data.hankoUrl || '';
 
   const redirectAfterLogin = useCallback(() => {
-      navigate("/dashboard");
+      navigate("/dashboard");//Path user gets navigated to once they log in
   }, [navigate]);
 
   useEffect(() => {
