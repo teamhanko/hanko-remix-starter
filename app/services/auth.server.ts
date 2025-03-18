@@ -19,7 +19,6 @@ export async function ValidateCurrentSession(request: Request, hankoUrl: string)
         if (!response.ok) throw new Error('Session validation failed');
         
         const verifiedResponse = await response.json();
-        console.log(verifiedResponse)
     
         return verifiedResponse.is_valid
         

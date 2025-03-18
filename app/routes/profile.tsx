@@ -4,7 +4,7 @@ import HankoStarterHeader from "../hanko starter components/HankoStarterHeader";
 import HankoProfile from "../components/HankoProfile";
 
 import { type LoaderFunction, redirect } from "@remix-run/node";
-import { ValidateCurrentSession } from "../lib/ValidateCurrentSession";
+import { ValidateCurrentSession } from "../services/auth.server";
 
 export const loader: LoaderFunction = async ({request}) => {
     const hankoUrl = process.env.HANKO_API_URL || "";
