@@ -4,14 +4,12 @@ export async function ValidateCurrentSession(request: Request, hankoUrl: string)
 
     const cookies = parse(request.headers.get("Cookie") || "");
     const cookieToken = cookies.hanko;
-
+    
     const validationOptions = { 
-        method: 'GET',
-        headers: {
-            'Cookie': `hanko=${cookieToken}` // If using cookie
-            // 'Authorization': `Bearer ${token}` // If using Authorization header
-        }
-    }
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: `{"session_token":"${cookieToken}"}`
+  }
 
       try {
         const response = await fetch(hankoUrl + '/sessions/validate', validationOptions);
