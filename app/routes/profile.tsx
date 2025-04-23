@@ -17,7 +17,7 @@ export const loader: LoaderFunction = async ({request}) => {
     return { hankoUrl: hankoUrl }; 
 };
 
-const profilePage = () => {
+const ProfilePage = () => {
   return (
     <>
       <HankoProfile />
@@ -27,4 +27,4 @@ const profilePage = () => {
     )
 }
 
-export default profilePage
+export default ProfilePage

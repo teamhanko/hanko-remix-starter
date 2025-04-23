@@ -16,7 +16,7 @@ Before you begin, ensure you have the following:
 - Hanko API URL from [Hanko Cloud](https://cloud.hanko.io/)
 
 > **Note:**
-> You'll need to create a Authentication Project on Hanko Cloud with the App URL `http://localhost:3000`. See our docs to learn how to setup a [auth project](https://docs.hanko.io/setup-hanko-cloud).
+> You'll need to create a Authentication Project on Hanko Cloud with the App URL `http://localhost:5173`. See our docs to learn how to setup a [auth project](https://docs.hanko.io/setup-hanko-cloud).
 
 ## Getting started
 

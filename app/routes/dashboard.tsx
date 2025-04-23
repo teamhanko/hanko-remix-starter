@@ -18,7 +18,7 @@ export const loader: LoaderFunction = async ({request}) => {
 };
 
 
-const dashboardPage = () => {
+const DashboardPage = () => {
   return (
     <>
       <HankoStarterInfo />
@@ -27,4 +27,4 @@ const dashboardPage = () => {
     </>  )
 }
 
-export default dashboardPage
+export default DashboardPage
