@@ -24,7 +24,7 @@ const LogoutButton = () => {
 
     const logout = async () => {
         try {
-            await hanko?.user.logout();
+            await hanko?.logout();
 
             navigate("/");//Path the user will be redirected to once logged out
             
@@ -34,7 +34,7 @@ const LogoutButton = () => {
         }
     };
 
-    return <button onClick={logout}>Logout</button>;
+    return <button onClick={logout}>Sign-Out</button>;
 }
   
   export default LogoutButton;
