@@ -1,7 +1,7 @@
-import HankoStarterInfo from "../hanko starter components/HankoStarterInfo";
-import HankoStarterDashboard from "../hanko starter components/HankoStarterDashboard";
-import HankoStarterHeader from "../hanko starter components/HankoStarterHeader";
 
+import HankoStarterInfo from "../hanko starter components/HankoStarterInfo";
+import HankoStarterHeader from "../hanko starter components/HankoStarterHeader";
+import HankoProfile from "../components/HankoProfile";
 
 import { type LoaderFunction, redirect } from "@remix-run/node";
 import { ValidateCurrentSession } from "../services/auth.server";
@@ -17,14 +17,14 @@ export const loader: LoaderFunction = async ({request}) => {
     return { hankoUrl: hankoUrl }; 
 };
 
-
-const DashboardPage = () => {
+const ProfilePage = () => {
   return (
     <>
+      <HankoProfile />
       <HankoStarterInfo />
-      <HankoStarterDashboard />
       <HankoStarterHeader />
-    </>  )
+    </>  
+    )
 }
 
-export default DashboardPage
+export default ProfilePage
